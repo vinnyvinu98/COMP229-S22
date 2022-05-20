@@ -1,0 +1,29 @@
+{
+  "name": "comp229-s22",
+  "version": "1.0.0",
+  "description": "Example",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinnyvinu98/COMP229-S22.git"
+  },
+  "keywords": [
+    "Code",
+    "Example",
+    "COMP229",
+    "Express",
+    "Nodejs"
+  ],
+  "author": "Vinny Mariam Vinu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vinnyvinu98/COMP229-S22/issues"
+  },
+  "homepage": "https://github.com/vinnyvinu98/COMP229-S22#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
