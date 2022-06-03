@@ -17,6 +17,8 @@ Date: Jun 02, 2022
   <!-- <link rel='stylesheet' href='/stylesheets/style.css' />   -->
 </head>
 <body>
+
+
   <!-- Navigation bar -->
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <!-- Brand/logo -->
@@ -51,13 +53,20 @@ Date: Jun 02, 2022
         <i class="fas fa-tasks"></i> Projects </a>
       </li>
       <li class="nav-item">
-        <% if(title == "Users") { %>
-          <a class="nav-link active" href="/users">
+        <% if(title == "Services") { %>
+          <a class="nav-link active" href="/services">
         <%} else {%>
-          <a class="nav-link" href="/users">
+          <a class="nav-link" href="/services">
         <%} %>
-        <i class="fas fa-users"></i> Users </a>
+        <i class="fas fa-users"></i> Services </a>
       </li>
-      
+      <li class="nav-item">
+        <% if(title == "Contact Me") { %>
+          <a class="nav-link active" href="/contact">
+        <%} else {%>
+          <a class="nav-link" href="/contact">
+        <%} %>
+        <i class="fas fa-users"></i> Contact Me</a>
+      </li>
     </ul>
   </nav>

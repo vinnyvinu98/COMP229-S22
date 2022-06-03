@@ -7,7 +7,7 @@ router.get('/', home);
 function home(req, res, next) {
   res.render('index', 
   {
-    title: 'Express' ,
+    title: 'Home' ,
     userName : 'Vinny'
   });
 }
@@ -26,6 +26,24 @@ router.get('/projects', function(req, res, next) {
   res.render('index', 
   {
     title: 'Projects' ,
+    userName : 'Vinny'
+  });
+})
+
+//Get Services page
+router.get('/services', function(req, res, next) {
+  res.render('index', 
+  {
+    title: 'Services' ,
+    userName : 'Vinny'
+  });
+})
+
+//Get Contact me page
+router.get('/contact', function(req, res, next) {
+  res.render('index', 
+  {
+    title: 'Contact Me' ,
     userName : 'Vinny'
   });
 })
