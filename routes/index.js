@@ -14,16 +14,16 @@ function home(req, res, next) {
 
 //Get About page
 router.get('/about', function(req, res, next) {
-  res.render('index', 
+  res.render('about', 
   {
     title: 'About' ,
-    userName : 'Vinny'
+    userName : 'Vinny Mariam Vinu'
   });
 })
 
 //Get Projects page
 router.get('/projects', function(req, res, next) {
-  res.render('index', 
+  res.render('projects', 
   {
     title: 'Projects' ,
     userName : 'Vinny'
@@ -32,7 +32,7 @@ router.get('/projects', function(req, res, next) {
 
 //Get Services page
 router.get('/services', function(req, res, next) {
-  res.render('index', 
+  res.render('services', 
   {
     title: 'Services' ,
     userName : 'Vinny'
@@ -41,7 +41,7 @@ router.get('/services', function(req, res, next) {
 
 //Get Contact me page
 router.get('/contact', function(req, res, next) {
-  res.render('index', 
+  res.render('contact', 
   {
     title: 'Contact Me' ,
     userName : 'Vinny'
