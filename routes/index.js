@@ -12,6 +12,8 @@ function home(req, res, next) {
   });
 }
 
+
+
 //Get About page
 router.get('/about', function(req, res, next) {
   res.render('about', 
@@ -39,6 +41,10 @@ router.get('/services', function(req, res, next) {
   });
 })
 
+router.get('/resume',function(req,res,next){
+  res.send("hello world")
+})
+
 //Get Contact me page
 router.get('/contact', function(req, res, next) {
   res.render('contact', 
@@ -47,5 +53,8 @@ router.get('/contact', function(req, res, next) {
     userName : 'Vinny'
   });
 })
+
+
+
 
 module.exports = router;
