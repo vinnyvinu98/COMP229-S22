@@ -4,6 +4,7 @@
  * Module dependencies.
  */
 
+var configDb =  require('./config/db');
 var app = require('./config/app');
 var debug = require('debug')('comp229-s22:server');
 var http = require('http');
@@ -13,6 +14,7 @@ const { rmSync } = require('fs');
  * Get port from environment and store in Express.
  */
 
+var db = configDb();
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
