@@ -1,4 +1,5 @@
-let atlasDB = "mongodb+srv://vinnyvinu:ckUZoivOTHyV8kqw@cluster0.07ott.mongodb.net/Inventory?retryWrites=true&w=majority";
+let atlasDB = "mongodb+srv://vinnyvinu:oLLhKXkp7OAdqwaY@cluster0.07ott.mongodb.net/DatabaseInventory?retryWrites=true&w=majority";
+
 // Database setup
 let mongoose = require('mongoose');
 

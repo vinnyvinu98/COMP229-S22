@@ -68,5 +68,16 @@ Date: Jun 02, 2022
         <%} %>
         <i class="fas fa-users"></i> Contact Me</a>
       </li>
+      <li class="nav-item dropdown">
+        <% if (title == "Inventory List" || title == "Add a new Item") { %>
+          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Inventory</a>
+        <% } else { %>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Inventory</a>
+        <% } %>       
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/inventory/list">Inventory List</a></li>
+          <li><a class="dropdown-item" href="/inventory/add">Add a new Item</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>

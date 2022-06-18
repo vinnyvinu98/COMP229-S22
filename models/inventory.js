@@ -15,7 +15,7 @@ let inventoryModel = mongoose.Schema(
         }
     },
     {
-        collection: "items"
+        collection: "CollectionItem"
     }
 );
 
