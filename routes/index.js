@@ -8,7 +8,7 @@ function home(req, res, next) {
   res.render('index', 
   {
     title: 'Home' ,
-    userName : 'Vinny'
+    userName: req.user ? req.user.username : ''
   });
 }
 
@@ -19,7 +19,7 @@ router.get('/about', function(req, res, next) {
   res.render('about', 
   {
     title: 'About' ,
-    userName : 'Vinny Mariam Vinu'
+    userName: req.user ? req.user.username : ''
   });
 })
 
@@ -28,7 +28,7 @@ router.get('/projects', function(req, res, next) {
   res.render('projects', 
   {
     title: 'Projects' ,
-    userName : 'Vinny'
+    userName: req.user ? req.user.username : ''
   });
 })
 
@@ -37,12 +37,12 @@ router.get('/services', function(req, res, next) {
   res.render('services', 
   {
     title: 'Services' ,
-    userName : 'Vinny'
+    userName: req.user ? req.user.username : ''
   });
 })
 
 router.get('/resume',function(req,res,next){
-  res.send("hello world")
+  res.send("hello")
 })
 
 //Get Contact me page
@@ -50,7 +50,7 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', 
   {
     title: 'Contact Me' ,
-    userName : 'Vinny'
+    userName: req.user ? req.user.username : ''
   });
 })
 
