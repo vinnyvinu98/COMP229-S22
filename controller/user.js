@@ -94,7 +94,6 @@ module.exports.signin = function(req, res, next){
 
 module.exports.signout = function(req, res, next) {
    
-    res.redirect('/');
         req.logout(function(err) {
           if (err) { return next(err); }
           res.redirect('/',);
