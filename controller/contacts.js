@@ -3,7 +3,7 @@ const { default: mongoose } = require('mongoose');
 let ContactModel = require('../models/contacts');
 
 module.exports.contactsList = function (req, res, next) {
-
+// display contact list
     ContactModel.find((err, contactsList) => {
 
         if (err) {
@@ -23,7 +23,7 @@ module.exports.contactsList = function (req, res, next) {
     }).sort('name')
 
 }
-
+// display edit page
 module.exports.displayEditPage = (req, res, next) => {
     let id = req.params.id;
     
@@ -46,7 +46,7 @@ module.exports.displayEditPage = (req, res, next) => {
 }
 
 
-
+//perform edit operation
 module.exports.processEditPage = (req, res, next) => {
     let id = req.params.id
     let updatedContact = {
@@ -63,7 +63,7 @@ module.exports.processEditPage = (req, res, next) => {
         }
     })
 }
-
+//perform delete operation
 module.exports.performDelete = (req, res, next) => {
     let id = req.params.id;
 

@@ -1,12 +1,12 @@
 //Filename: appclient.js
 //Student: Vinny Mariam Vinu
 //StudentId: 301234317
-//Date: Jun 02, 2022 
+//Date: Jun 20, 2022 
 
 
 console.log('App script is working.');
 
-if(getTitle == "Inventory List")
+if(getTitle == "Inventory List" || getTitle == "Contacts List")
 {
     let deleteButtons = document.querySelectorAll('.btn-danger');
         
