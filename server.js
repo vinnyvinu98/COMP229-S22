@@ -8,7 +8,8 @@
  var app = require('./config/app');
  var debug = require('debug')('comp229.003.m2022:server');
  var http = require('http');
- var passportConfig = require('./config/passport');
+ var passportConfig = require('./config/local');
+
  
  /**
   * Get port from environment and store in Express.

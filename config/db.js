@@ -1,11 +1,11 @@
-let atlasDB = "mongodb+srv://vinnyvinu:oLLhKXkp7OAdqwaY@cluster0.07ott.mongodb.net/DatabaseInventory?retryWrites=true&w=majority";
+let URI = require('./config').ATLASDB
 
 // Database setup
 let mongoose = require('mongoose');
 
 module.exports = function(){
 
-    mongoose.connect(atlasDB);
+    mongoose.connect(URI);
     let mongodb = mongoose.connection;
 
     mongodb.on('error', console.error.bind(console, 'Connection Error:'));
