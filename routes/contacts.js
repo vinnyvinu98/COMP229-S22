@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-let contactsController = require('../controller/contacts');
+let contactsController = require('../controllers/contacts');
 
 // Connect to our model
 let contacts = require('../models/contacts');
