@@ -30,14 +30,7 @@ module.exports.inventoryList = function(req, res, next){
 
                 }
                 else{
-                    // // console.log(inventoryList);
-                    // res.render(
-                    //     'inventory/list', 
-                    //     { 
-                    //       title: 'Inventory List',
-                    //       InventoryList: inventoryList
-                    //     }
-                    //   );
+
                     res.status(200).json(inventoryList);
         
                 }
