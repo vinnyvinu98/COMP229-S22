@@ -59,27 +59,6 @@ module.exports.inventoryList = function(req, res, next){
 }
 
 
-// module.exports.displayEditPage = (req, res, next) => {
-//     let id = req.params.id;
-
-//     InventoryModel.findById(id, (err, itemToEdit) => {
-//         if(err)
-//         {
-//             console.log(err);
-//             res.end(err);
-//         }
-//         else
-//         {
-//             //show the edit view
-//             res.render('inventory/add_edit', {
-//                 title: 'Edit Item', 
-//                 item: itemToEdit
-//             })
-//         }
-//     });
-// }
-
-
 module.exports.processEdit = (req, res, next) => {
     try {
             let id = req.params.id
@@ -180,16 +159,6 @@ module.exports.performDelete = (req, res, next) => {
     
 }
 
-
-
-// module.exports.displayAddPage = (req, res, next) => {
-//     let newItem = InventoryModel();
-
-//     res.render('inventory/add_edit', {
-//         title: 'Add a new Item',
-//         item: newItem
-//     })          
-// }
 
 module.exports.processAdd = (req, res, next) => {
     try

@@ -2,10 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 let inventoryController = require('../controllers/inventory');
-
-// Connect to our model
-let Inventory = require('../models/inventory');
-
+let authController = require('../controllers/auth');
 
 // helper function for guard purposes
 // function requireAuth(req, res, next)
@@ -24,10 +21,10 @@ router.get('/list', inventoryController.inventoryList);
 
 // Routers for Edit
 //router.get('/edit/:id', requireAuth, inventoryController.displayEditPage);
-router.put('/edit/:id', inventoryController.processEdit);
+router.put('/edit/:id', authController.requireAuth, inventoryController.processEdit);
 
 // Routers for Delete
-router.delete('/delete/:id', inventoryController.performDelete);
+router.delete('/delete/:id', authController.requireAuth, inventoryController.performDelete);
 
 
 // /* GET Route for displaying the Add page - CREATE Operation */
