@@ -21,16 +21,16 @@ router.get('/list', inventoryController.inventoryList);
 
 // Routers for Edit
 //router.get('/edit/:id', requireAuth, inventoryController.displayEditPage);
-router.put('/edit/:id', authController.requireAuth, inventoryController.processEdit);
+router.put('/edit/:id', authController.requireAuth, authController.isAllowed, inventoryController.processEdit);
 
 // Routers for Delete
-router.delete('/delete/:id', authController.requireAuth, inventoryController.performDelete);
+router.delete('/delete/:id', authController.requireAuth, authController.isAllowed, inventoryController.performDelete);
 
 
 // /* GET Route for displaying the Add page - CREATE Operation */
 // router.get('/add', requireAuth, inventoryController.displayAddPage);
 
 /* POST Route for processing the Add page - CREATE Operation */
-router.post('/add', inventoryController.processAdd);
+router.post('/add',authController.requireAuth, inventoryController.processAdd);
 
-module.exports = router;
+module.exports = router;            

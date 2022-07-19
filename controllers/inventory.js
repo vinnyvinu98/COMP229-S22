@@ -15,28 +15,15 @@ function getErrorMessage(err) {
 };
 
 
-module.exports.inventoryList = function(req, res, next){
+module.exports.inventoryList = async function(req, res, next){
     try {
-            InventoryModel.find( (err, inventoryList)=>{
+        let inventoryList = await InventoryModel.find().populate(
+            {
+                path : 'owner',
+                select : 'firstname lastname email username admin created'
+            });
+            res.status(200).json(inventoryList);
 
-                if(err){
-                    console.error(err);
-                    return res.status(400).json(
-                        {
-                                success: false,
-                                message: getErrorMessage(err)
-                        }
-                    );
-
-                }
-                else{
-
-                    res.status(200).json(inventoryList);
-        
-                }
-        
-            }) ; 
-        
     } catch (error) {
         return res.status(400).json(
             {
@@ -66,7 +53,8 @@ module.exports.processEdit = (req, res, next) => {
                 w : req.body.size.w,
                 uom : req.body.size.uom,
             },
-            tags: req.body.tags.split(",").map(word => word.trim())
+            tags: (req.body.tags == null || req.body.tags == "") ? "": req.body.tags.split(",").map(word => word.trim()),
+            owner: (req.body.owner == null || req.body.owner == "")? req.payload.id : req.body.owner
         });
 
         // console.log(updatedItem);
@@ -167,7 +155,8 @@ module.exports.processAdd = (req, res, next) => {
                 w: req.body.size.w,
                 uom: req.body.size.uom,
             },
-            tags: req.body.tags.split(",").map(word => word.trim())
+            tags: (req.body.tags == null || req.body.tags == "") ? "": req.body.tags.split(",").map(word => word.trim()),
+            owner: (req.body.owner == null || req.body.owner == "")? req.payload.id : req.body.owner
         });
 
         InventoryModel.create(newItem, (err, item) =>{
